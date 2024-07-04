@@ -208,8 +208,8 @@ p {
 }
 
 
-@media (min-width:10px) and (max-width: 900px) {
+@media (min-width:0px) and (max-width: 900px) {
   .products-container {
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 }
