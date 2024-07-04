@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Inter', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --black: rgba(0, 0, 0, 1);
+  --white: rgba(255, 255, 255, 1);
+
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  gap: 40px;
+  margin-top: 2rem;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 900;
+}
+
+.radio-inputs {
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 0.5rem;
+  box-sizing: border-box;
+  box-shadow: 0 0 0px 1px rgba(0, 0, 0, 0.06);
+  padding: 0.25rem;
+  background: rgba(242, 242, 242, 1);
+}
+
+.radio-inputs .radio {
+  flex: 1 1 auto;
+  text-align: center;
+  width: 10rem;
+}
+
+.radio img {
+  width: 20px;
+  margin-right: 15px;
+
+}
+
+.radio-inputs .radio input {
+  display: none;
+}
+
+.radio-inputs .radio .category {
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0;
+  transition: all 0.15s ease-in-out;
+
+
+  font-weight: 700;
+}
+
+.radio-inputs .radio input:checked+.category {
+  color: var(--white);
+  background: var(--black);
+}
+
+.products-container {
+  width: 100%;
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.product-card {
+  width: 310px;
+  position: relative;
+  box-shadow: 0 2px 7px #dfdfdf;
+  background: #fafafa;
+  box-shadow: 0 2px 7px #dfdfdf;
+  background: #fafafa;
+  transition: box-shadow 0.3s, transform 0.3s;
+  cursor: pointer;
+
+}
+
+.product-Img:hover {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.badge {
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  text-transform: uppercase;
+  font-size: 13px;
+  background: var(--white);
+
+  padding: 10px;
+  font-weight: 800;
+}
+
+.product-Img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f0f0f0;
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.product-Img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.product-details {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.product-details div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product-details h3,
+p {
+  font-weight: 800;
+
+}
+
+.product-details h3 a {
+  text-decoration: none;
+  transition: 0.3s;
+  line-height: 13px;
+  color: black;
+
+}
+
+.product-details h3 a:hover {
+  color: #f11456;
+}
+
+.product-details p {
+  font-size: 15px;
+  font-weight: 700;
+
+}
+
+.product-details del {
+  color: rgba(143, 143, 143, 1);
+
+}
+
+.product-details p span {
+  color: red;
+}
+
+.product-card .add-btn {
+  width: 100%;
+  background: var(--black);
+  color: var(--white);
+  border-radius: 0.25em;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 1rem;
+  line-height: 9px;
+}
+
+.product-card .add-btn:hover {
+  background: var(--white);
+  color: var(--black);
+  transition: all 0.5s;
+  font-weight: 900;
+}
+
+
+@media (min-width:10px) and (max-width: 900px) {
+  .products-container {
+    flex-wrap: nowrap;
+  }
+}
